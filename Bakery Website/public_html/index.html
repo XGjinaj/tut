@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+            <title>Menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="shortcut icon" href="#">
+     <style>
+        body {
+          margin: 0;
+          font-family: Arial;
+          background-color: #333; 
+           min-height: 100vh;
+          display: flex;
+          flex-direction: column;   
+          text-align: center;
+        }
+        /* Style the heading */
+        h1{
+           font-family: serif;
+           font-style: italic;
+           color:white;
+           background:#222;
+           padding:20px;
+           margin:0;
+           text-align: center;
+
+        }
+          /* -------- GO TO TOP --------- */
+            .gotop{
+                position: fixed;
+                width: 50px;
+                height: 50px;
+                background: #cc8800;
+                bottom: 30px;
+                right:40px;
+                text-decoration: none;
+                text-align: center;
+                line-height: 50px;
+                color: white;
+                font-size: 20px;
+            }
+            .gotop:hover {
+                background-color: white;
+                color: #cc8800;
+            }
+            .products {
+                font-family: serif;
+               font-style: italic;
+                position: sticky;
+                width: 130px;
+                height: 50px;
+                background: lightgray;
+                bottom: 30px;
+                right:40px;
+                text-decoration: none;
+                text-align: center;
+                line-height: 50px;
+                color: black;
+                font-size: 30px;
+            }
+            .products:hover {
+                background-color: black;
+                color: white;
+            }
+            
+            .ing {
+                width: 100%;
+                height: auto;
+                /* APO W3C */
+                background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)), url("images/menu.png");
+                background-position: center;
+                background-size: cover;
+            }
+            ul {
+               font-family: serif;
+               font-style: italic;
+                margin: 0;
+                list-style-position: inside;
+                font-size: 26px;
+                color: white;
+                margin:0;
+                padding-top: 20px;     
+            }
+        .header {
+            font-family: serif;
+            text-align: center;
+            background-color: #111;
+            padding: 18px;
+            font-size: 45px;
+            color: white;
+            position: sticky;
+           top: 0;
+        }
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 22px;
+        }
+        .topnav a.active {
+          background-color: #222;
+          color: white;
+        }
+        .topnav a:hover {
+          background-color: #999;
+          color: black;
+        }
+        .topnav .icon {
+          display: none;
+        }
+        /* Style the footer */
+        footer {
+          padding: 20px;
+          background-color: #111;
+          color: white;
+          margin-top: auto; /* making the footer stick to the bottom of the page */
+        }
+    @media screen and (max-width: 800px) {
+      .topnav a:not(:first-child) {
+          display: none;
+      }
+      .topnav a.icon {
+         float: right;
+         display: block;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .topnav.responsive {
+          position: relative;
+      }
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left; /*or center*/
+      }
+    }
+    @media screen and (max-width: 600px) {
+        .quick-links {					 
+            display:block;
+            margin:0; 
+        }
+        .quick-links ul{				 
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+        .quick-items a{					 
+            display:block;
+            margin:0; 
+        }
+    }
+    </style>
+  </head>
+   <body>
+         <div class="header">Ali G's Bakery</div>
+                
+    <div class="topnav" id="Id">
+      <a href="home.html" class="active"><i class="fa fa-home"></i> Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About Us</a>
+      <a href="form.html">Sign Up</a>
+      <a href="javascript:void(0);" class="icon" onclick="test()">
+        <i class="fa fa-bars"></i> </a>
+    </div>
+           <img class='img-beep' src="https://content.4ty.gr/subdomain-bgslideshows/17085/bakery.jpg" alt="menu1">     
+ 
+          <h1>Menu</h1>
+ 
+          <div class="ing">
+                <ul style="padding:60px;">                    
+                    <li>BREADS 
+                <ul>
+                    <li>English Muffin</li> 
+                    <li>Cheese Bread</li>
+                    <li>Banana Bread</li>
+                    <li>Brioche Loaf</li>
+                    <li>Multi-grain</li>
+                    <li>Pandesal</li>
+                    <li>Half Loaf</li>
+                    <li>Baguette</li> 
+                    <li>Cracker</li>
+                    <li>Bagel</li>
+                </ul> <br>
+                </li> 
+                <li>PASTRIES 
+                  <ul>
+                    <li>Mille-feville</li>
+                    <li>Empanada</li>
+                    <li>Cherry Pie</li>
+                    <li>Pecan Pie</li>
+                    <li>Croissant</li>
+                    <li>Bizcocho</li>
+                    <li>Pionono</li>
+                    <li>Cannoli</li>
+                  </ul> <br>
+                </li> 
+                <li>COFFEE & TEA
+                  <ul>
+                    <li>Caramel Latte</li>
+                    <li>Hot Chocolate</li>
+                    <li>Cappuccino</li>
+                    <li>Iced Coffee</li>
+                    <li>Americano</li>
+                    <li>Green Tea</li>
+                    <li>Black Tea</li>
+                    <li>Espresso</li>
+                    <li>Cocoa</li>
+                    <li>Latte</li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+          <a class="gotop" href="#">TOP</a>
+          <a class="products" href="products.html">Go Back</a>
+    
+        <script>
+            function test() {
+              var x = document.getElementById("Id");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } 
+              else {
+                x.className = "topnav";
+              }
+            }
+        </script>
+    
+     <!-- W3C CSS VALIDATOR -->
+
+          <footer>
+              <p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer"></a>
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+<a href="http://jigsaw.w3.org/css-validator/check/referer">  </a>
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" /><p>Copyright &copy; 2022 <br><br> Ali G's Bakery All Rights Reserved</footer>
+ 
+  </body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+            <title>Sign Up</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="#">
+     <style>
+        body {
+          margin: 0;
+          font-family: Arial;
+          background-color: #333; 
+           min-height: 100vh;
+          display: flex;
+          flex-direction: column;     
+        }
+         .img-beep {
+        width: 100%;
+        height: auto;
+        }
+          /* -------- GO TO TOP --------- */
+            .gotop{
+                position: fixed;
+                width: 50px;
+                height: 50px;
+                background: #cc8800;
+                bottom: 30px;
+                right:40px;
+                text-decoration: none;
+                text-align: center;
+                line-height: 50px;
+                color: white;
+                font-size: 20px;
+            }
+            .gotop:hover {
+                background-color: white;
+                color: #cc8800;
+            }
+            h1{
+                font-family: serif;
+                font-style: italic;
+                color: black;
+                background: #cc8800;
+                padding: 30px;
+                margin: 0;
+                text-align: center;
+            }
+            h2{
+                color: white;
+                background:#111;
+                font-size: 26px;
+                padding:20px;
+                margin:0;
+                text-align: center;
+            }
+            .form{
+                color: white;
+                font-size: 18px;
+                background:#111;
+               
+            }
+        .header {
+            font-family: serif;
+            text-align: center;
+            background-color: #111;
+            padding: 18px;
+            font-size: 45px;
+            color: white;
+            position: sticky;
+            top: 0;   
+        }
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 22px;
+        }
+        .topnav a.active {
+          background-color: #222;
+          color: white;
+        }
+        .topnav a:hover {
+          background-color: #999;
+          color: black;
+        }
+        .topnav .icon {
+          display: none;
+        }
+         /* Style the footer */
+        footer {
+          padding: 0px;
+          background-color: #111;
+          color: white;
+          margin-top: auto; /* making the footer stick to the bottom of the page */
+
+        }
+        .upper-footer {
+            margin:0;
+            padding:0;
+            background-color:#444;    
+        }
+        .quick-links{						 
+            display:flex;
+            width: 100%;
+            height:auto;
+            text-align:right;
+            margin:0;
+        }
+        .quick-links ul{					 
+            display: flex;
+        }
+        .quick-items{						 
+            list-style: none;
+        }
+        .quick-items a{						 
+            text-decoration: none;
+            padding: 15px;
+            font-size: 20px;
+            color: white;
+        }
+        .quick-items a:hover{ 				
+            color: #cc8800;
+        } 
+        .lower-footer{						 
+            padding: 15px; 
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            background-color: #111;
+        }
+    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    @media screen and (max-width: 800px) {
+      .topnav a:not(:first-child) {
+          display: none;
+      }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .topnav.responsive {
+          position: relative;
+      }
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left; /*or center*/
+      }
+    }
+    @media screen and (max-width: 600px) {
+        .quick-links {					 
+            display:block;
+            margin:0; 
+        }
+        .quick-links ul{				 
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+        .quick-items a{					 
+            display:block;
+            margin:0; 
+        }
+    }
+    </style>
+  </head>
+   <body>
+        <div class="header">Sliker's Bakery</div>
+                
+    <div class="topnav" id="Id">
+      <a href="home.html" class="active"><i class="fa fa-home"></i> Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About Us</a>
+      <a href="form.html">Sign Up</a>
+      <a href="javascript:void(0);" class="icon" onclick="test()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+            <h1>Become A Customer!</h1>
+               <h2>Sign Up</h2> 
+          
+                           <!--  LOGIN FORM -->                     
+        <div class="form" align=center>
+          <form method="get">
+            <table style="outline:2px solid white; padding:2px; outline-width:5px; background:#111;">  
+          	   <tr>
+                   <td> <label id="fname">Username:</label></td>
+                   <td><input type="text" name="firstname"></td>
+               </tr>        
+               <tr>
+                   <td> <label id="pword">Password:</label></td>
+                   <td><input type="password" name="pword"></td>
+               </tr>
+               <tr>
+                   <td><label id="email">E-Mail:</label></td>
+                   <td><input type="email" name="email"></td>
+               </tr>
+               <tr>
+                   <td> <label id="tel"> Telephone:</label></td>
+                   <td><input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required></td>
+               </tr>
+               <tr>
+                   <td> <label id="gender">Gender:</label></td>
+                   <td>
+                       Female<input type="radio" name="gender" value="female"><br>
+                       Male<input type="radio" name="gender" value="male"><br>
+                       Non-Binary<input type="radio" name="gender" value="no-disclosure"><br></td>
+               </tr>
+               <tr>
+                    <td> <label id="comment">Comment:</label></td>
+                    <td><textarea name='comment' cols='21' rows='2'></textarea></td>
+               </tr>
+               <tr>
+                    <td></td><td><input type="submit" value="Submit">&nbsp;<input type='reset' value='Reset'></td>
+               </tr>
+            </table>
+              <br><br>
+          </form>
+        </div>
+                   <img class='img-beep' src="https://reseller-content.4ty.gr/site2/chris-ftp/kivetos/psomi-33.jpg" alt="login1">  
+                
+          <a class="gotop" href="#">TOP</a>
+          
+    <script>
+        function test() {
+          var x = document.getElementById("Id");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } 
+          else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+    
+        <footer>
+               <div class="upper-footer">
+                 <div class="quick-links">
+                    <ul>
+                      <li class="quick-items"><a href="home.html">Home</a></li>
+                      <li class="quick-items"><a href="products.html">Products</a></li>
+                      <li class="quick-items"><a href="contact.html">Contact</a></li>
+                      <li class="quick-items"><a href="about.html">About</a></li>
+                      <li class="quick-items"><a href="form.html">Sign Up</a></li>
+                    </ul>
+                  </div>
+               </div>
+       
+              <div class="lower-footer">
+     <!-- W3C CSS VALIDATOR -->
+   <p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer"></a>
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+<a href="http://jigsaw.w3.org/css-validator/check/referer">  </a>
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" /><p>
+        
+                      Copyright &copy; 2022 <br><br> Ali G's Bakery All Rights Reserved
+              </div>
+        </footer>
+    
+    </body>
+</html>
